@@ -10,8 +10,6 @@ class Main extends Component {
   }
 
   render() {
-    //        {React.cloneElement(this.props.children, this.props)}
-    console.log(this);
     return (
       <div>
         <h1>
