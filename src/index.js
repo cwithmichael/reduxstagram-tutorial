@@ -5,14 +5,16 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 import Main from './components/Main';
 import registerServiceWorker from './registerServiceWorker';
-
-const history = createBrowserHistory();
+import { Provider } from 'react-redux';
+import store, { history } from './store';
 
 const router = (
-  <BrowserRouter history={history}>
-      <Route path='/' component={Main}>
-    </Route>
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter history={history}>
+        <Route path='/' component={Main}>
+      </Route>
+    </BrowserRouter>
+  </Provider>
 )
 ReactDOM.render(router, document.getElementById('root'));
 registerServiceWorker();
