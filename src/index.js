@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { BrowserRouter, Route } from 'react-router-dom';
-import createBrowserHistory from 'history/createBrowserHistory';
 import Main from './components/Main';
 import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';

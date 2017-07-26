@@ -5,10 +5,7 @@ import PhotoGrid from './PhotoGrid';
 import { Route } from 'react-router-dom';
 
 class Main extends Component {
-  constructor(props) {
-    super(props);
-  }
-
+  
   render() {
     return (
       <div>
