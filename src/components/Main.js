@@ -12,8 +12,8 @@ class Main extends Component {
         <h1>
           <Link to="/">Reduxstagram</Link>
         </h1>
-        <Route exact path='/' render={() => <PhotoGrid {... this.props}/>}/>
-        <Route path='/view/:postId' render={() => <Single {... this.props}/>}/>
+        <Route exact path='/' render={() => <PhotoGrid {...this.props}/>}/>
+        <Route path='/view/:postId' render={() => <Single {...this.props}/>}/>
       </div>
     )
   }
