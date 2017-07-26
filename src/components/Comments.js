@@ -8,12 +8,16 @@ class Comments extends React.Component {
   }
 
   renderComment(comment, i) {
+    const postId = this.props.location.pathname.match(/.*view\/(.*)/)[1];
     return (
       <div className="comment" key={i}>
         <p>
           <strong>{comment.user}</strong>
           {comment.text}
-          <button className="remove-comment">&times;</button>
+          <button className="remove-comment"
+                  onClick={this.props.removeComment.bind(null, postId, i)}>
+              &times;
+          </button>
         </p>
       </div>
     )
