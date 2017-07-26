@@ -4,16 +4,14 @@ import Comments from './Comments';
 
 class Single extends React.Component {
   render() {
-    const i = this.props.posts.findIndex(
-      (post) => 
-        post.code === 
-        this.props.location.pathname.match(/.*view\/(.*)/)[1]
-    );
-  const post = this.props.posts[i];
-  return (
+    const postId = this.props.location.pathname.match(/.*view\/(.*)/)[1];
+    const i = this.props.posts.findIndex((post) => post.code === postId);
+    const post = this.props.posts[i];
+    const postComments = this.props.comments[postId] || [];
+    return (
       <div className="single-photo">
         <Photo i={i} post={post} {...this.props} />
-        <Comments />
+        <Comments postComments={postComments} {...this.props}/>
       </div>
     )
   }
