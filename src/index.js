@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Main from './components/Main';
+import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 import store, { history } from './store';
@@ -10,7 +10,7 @@ import store, { history } from './store';
 const router = (
   <Provider store={store}>
     <BrowserRouter history={history}>
-        <Route path='/' component={Main}>
+        <Route path='/' component={App}>
       </Route>
     </BrowserRouter>
   </Provider>
