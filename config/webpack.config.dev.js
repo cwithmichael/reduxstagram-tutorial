@@ -178,7 +178,7 @@ module.exports = {
       {
       test: /\.styl$/,
       include: paths.appSrc,
-      loader: [require.resolve('style-loader'), require.resolve('css-loader'), require.resolve('stylus-loader')]
+      loader: 'style-loader!css-loader!stylus-loader',
     },
       // "postcss" loader applies autoprefixer to our CSS.
       // "css" loader resolves paths in CSS and adds assets as dependencies.
